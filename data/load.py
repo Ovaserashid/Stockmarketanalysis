@@ -14,6 +14,6 @@ for year in range(start_year, end_year + 1, 5):
     sensex_data = extract_data(start, end)
 
     #Store the data in a CSV file
-    sensex_data.to_csv(f"sensex_data_{start_year}_to_{end_year}.csv")
+    sensex_data.to_csv(f"sensex_data_{start}_to_{end}.csv")
 
-    time.sleep(60)
+    time.sleep(10)
