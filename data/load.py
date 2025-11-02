@@ -2,7 +2,7 @@ from extract import extract_data
 import time
 
 #Define start and end years
-start_year = 2023
+start_year = 2000
 end_year = 2025
 #Extract Sensex data for the defined period
 #Note that to avoid hitting API rate limits, we will extract data 5 years at a time and add delays between calls
