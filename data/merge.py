@@ -20,7 +20,7 @@ data_list = []
 for year in range(start_year, end_year + 1, 5):
     start = year
     end = min(year + 4, end_year)
-    file_name = f"sensex_data_{start}_to_{end}.csv"
+    file_name = f"sensex_data_INFY.NS_{start}_to_{end}.csv"
     try:
         data = pd.read_csv(file_name, index_col=0, parse_dates=True)
         data_list.append(data)
@@ -34,6 +34,6 @@ if data_list:
     merged_data = pd.concat(data_list)
 
     #Save the merged data to a new CSV file
-    merged_data.to_csv(f"sensex_data_{start_year}_to_{end_year}.csv")
+    merged_data.to_csv(f"sensex_data_INFY_{start_year}_to_{end_year}.csv")
     print(f"Merged data saved to sensex_data_{start_year}_to_{end_year}.csv")
 
