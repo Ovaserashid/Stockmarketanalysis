@@ -6,9 +6,10 @@ import pandas as pd
    The CSV files are assumed to be named in the format 'sensex_data_{start_year}_to_{end_year}.csv
    where start_year and end_year are in increments of 5 years from 2000 to 2025.'''
 
+
 #Define years range
 start_year = 2000
-end_year = 2025
+end_year = 2024
 
 '''Make loop from start_year to end_year and read each CSV file, appending the data to a list then 
    concatenate all dataframes in the list into a single dataframe and save to a new CSV file.'''
@@ -33,6 +34,6 @@ if data_list:
     merged_data = pd.concat(data_list)
 
     #Save the merged data to a new CSV file
-    merged_data.to_csv("sensex_data_2000_to_2025.csv")
-    print("Merged data saved to sensex_data_2000_to_2025.csv")
+    merged_data.to_csv(f"sensex_data_{start_year}_to_{end_year}.csv")
+    print(f"Merged data saved to sensex_data_{start_year}_to_{end_year}.csv")
 
